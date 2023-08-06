@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800&family=Montserrat:wght@500;700&display=swap');
+
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    font-size: 14px;
+
+}
+
+.container {
+    display: flex;
+    width: 650px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-container img {
+    max-width: 325px;
+    height: 100%;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: hsl(0, 0%, 100%);
+    padding: 40px;
+    text-align: left;
+    font-family: 'Montserrat';
+
+}
+
+h2 {
+    font-weight: 100;
+    font-size: small;
+    letter-spacing: 7px;
+}
+
+h1,
+.discount-price {
+    font-size: 2.2rem;
+    line-height: 96%;
+    font-family: 'Fraunces', serif;
+}
+
+p,
+.orginal-price {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+.discount-price {
+    color: hsl(158, 36%, 37%);
+}
+
+.orginal-price {
+    text-decoration: line-through;
+    color: black;
+}
+
+.cart-button {
+    text-align: center;
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    padding: 18px 0px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+
+button {
+    border: 0px none;
+}
+
+.cart-button:hover {
+    cursor: pointer;
+    background-color: hsl(158, 47%, 23%);
+    color: white;
+}
+
+/* Media Query for the Maximum width 375px */
+
+@media screen and (max-width: 376px) {
+    body {
+        padding: 10px;
+        height: auto;
+    }
+
+    .container {
+        /* display: block;.= */
+        max-width: 375px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image-container {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    .image-container img {
+        content: url('/images/image-product-mobile.jpg');
+        width: 100%;
+        max-width: 375px;
+        height: auto;
+        margin: 0;
+    }
+
+    .text-container {
+        height: 350px;
+        padding: 20px;
+    }
+
+}
